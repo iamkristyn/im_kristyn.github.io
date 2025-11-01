@@ -1,101 +1,135 @@
-/* ----- FONT SETUP ----- */
-:root {
-  --bg: #0a0a0d;
-  --text: #f2f2f2;
-  --muted: #b6b6bb;
-  --accent: #c94b42; /* soft cherry red */
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Preview — kristynhe</title>
+  <style>
+    :root {
+      --bg: #0a0a0d;
+      --text: #f4f4f5;
+      --muted: #b6b6bb;
+      --accent: #d03b32;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: Georgia, serif;
+      line-height: 1.6;
+      opacity: 0;
+      animation: fadeIn 1.5s ease forwards;
+    }
 
-/* ----- BASE ----- */
-* { box-sizing: border-box; }
-body {
-  margin: 0;
-  padding: 0;
-  background: var(--bg);
-  color: var(--text);
-  font-family: 'IBM Plex Serif', 'Times New Roman', serif;
-  text-align: center;
-  animation: fadein 1.2s ease-in;
-}
-@keyframes fadein {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
-}
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
 
-/* ----- HEADER ----- */
-.main-header {
-  padding: 80px 0 30px;
-}
-.logo {
-  font-family: 'Dancing Script', cursive;
-  font-size: 70px;
-  font-weight: 600;
-  color: var(--text);
-  margin: 0 0 30px;
-  letter-spacing: 1px;
-  transition: 0.4s ease;
-}
-.logo:hover {
-  color: var(--accent);
-}
-.nav {
-  font-family: 'Courier Prime', monospace;
-  font-size: 14px;
-  letter-spacing: 0.08em;
-}
-.nav a {
-  text-decoration: none;
-  color: var(--text);
-  opacity: 0.6;
-  margin: 0 8px;
-  transition: 0.3s;
-}
-.nav a:hover, .nav a.active {
-  color: var(--accent);
-  opacity: 1;
-}
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding: 28px 42px;
+      border-bottom: 1px solid rgba(255,255,255,.1);
+    }
+    .brand {
+      font-size: 32px;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+    }
+    nav a {
+      color: var(--text);
+      text-decoration: none;
+      margin-left: 12px;
+      text-transform: uppercase;
+      font-size: 13px;
+      letter-spacing: 0.07em;
+      opacity: 0.5;
+      transition: opacity 0.3s ease, color 0.3s ease;
+    }
+    nav a:hover, nav a.active {
+      opacity: 1;
+      color: var(--accent);
+    }
 
-/* ----- HERO IMAGE ----- */
-.hero {
-  margin: 60px auto 30px;
-  max-width: 720px;
-}
-.hero img {
-  width: 100%;
-  border: 1px solid rgba(255,255,255,0.08);
-  border-radius: 2px;
-  display: block;
-  filter: brightness(0.92);
-  transition: 0.6s;
-}
-.hero img:hover {
-  filter: brightness(1);
-}
-.caption {
-  font-family: 'Courier Prime', monospace;
-  color: var(--muted);
-  font-size: 12px;
-  margin-top: 10px;
-  letter-spacing: 0.03em;
-}
+    main {
+      width: min(900px, 90%);
+      margin: 60px auto;
+    }
 
-/* ----- INTRO ----- */
-.intro {
-  max-width: 600px;
-  margin: 60px auto 100px;
-  line-height: 1.7;
-  font-size: 15px;
-  color: var(--muted);
-}
-.intro p {
-  margin-bottom: 20px;
-}
+    figure {
+      margin-bottom: 24px;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,.05);
+      transition: transform 0.4s ease;
+    }
+    figure:hover {
+      transform: scale(1.01);
+    }
+    img {
+      width: 100%;
+      display: block;
+    }
+    figcaption {
+      font-size: 12px;
+      color: var(--muted);
+      padding: 10px 14px;
+    }
 
-/* ----- FOOTER ----- */
-.footer {
-  font-family: 'Courier Prime', monospace;
-  font-size: 12px;
-  color: var(--muted);
-  margin-bottom: 40px;
-  letter-spacing: 0.05em;
-}
+    section {
+      background: rgba(255,255,255,.02);
+      border: 1px solid rgba(255,255,255,.05);
+      padding: 22px;
+      margin-top: 30px;
+      border-radius: 6px;
+      animation: fadeIn 1.5s ease forwards;
+    }
+
+    h1 {
+      font-size: 30px;
+      margin-bottom: 16px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand">kristynhe</div>
+    <nav>
+      <a href="#" class="active">(home)</a>
+      <a href="#">(projects)</a>
+      <a href="#">(selected work)</a>
+      <a href="#">(sketches)</a>
+      <a href="#">(design)</a>
+    </nav>
+  </header>
+
+  <main>
+    <figure>
+      <img src="https://picsum.photos/900/500?grayscale" alt="">
+      <figcaption>“cinematic self / 2025.” film tone study.</figcaption>
+    </figure>
+
+    <section>
+      <h1>Kristyn He — Film & Photography</h1>
+      <p>
+        I make images and moving images that stay between documentary and staged.
+        I like dream-core tones, soft light, and cinematic quiet.
+      </p>
+      <p>
+        London · Shanghai · Boston University (Film & TV). This space is my online studio —
+        to gather work, research, and fragments of stories.
+      </p>
+    </section>
+  </main>
+
+  <footer>© 2025 · kristynhe</footer>
+</body>
+</html>
