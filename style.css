@@ -26,16 +26,17 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 40px 80px 30px;
+  padding: 50px 100px 40px;
 }
 
-/* LOGO — left like Cherrywood */
+/* ----- LOGO ----- */
 .logo {
   font-family: 'Dancing Script', cursive;
-  font-size: 60px;
+  font-size: 80px;
   font-weight: 600;
   color: #c94b42; /* Cherry red */
   margin: 0;
+  margin-top: 20px 
   letter-spacing: 1px;
   transition: color 0.4s ease;
 }
