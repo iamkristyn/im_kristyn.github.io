@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kristyn Universe</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+  <header class="site-header">
+    <span class="logo-dot"></span>
+    <span class="site-title">Kristyn Universe</span>
+    <nav class="site-nav">
+      <a href="#photography">Photography</a>
+      <a href="#film">Film / Projects</a>
+      <a href="#artworks">Art Works</a>
+      <a href="#about">About</a>
+    </nav>
+  </header>
+
+  <!-- HERO / INTRO -->
+  <section class="hero" id="top">
+    <div class="hero-inner fade-in">
+      <p class="eyebrow">visual narratives · film · photography</p>
+      <h1>Kristyn Universe</h1>
+      <p class="lead">
+        dream‑core, cool‑tone visuals — stories between documentary texture and staged stillness.
+      </p>
+      <div class="hero-tags">
+        <span class="chip">London</span>
+        <span class="chip">Film & TV</span>
+        <span class="chip">Cinematic</span>
+      </div>
+      <a class="ghost-btn" href="#photography">Enter ↓</a>
+    </div>
+    <div class="hero-shadow"></div>
+  </section>
+
+  <main>
+    <!-- PHOTOGRAPHY -->
+    <section id="photography" class="section">
+      <div class="section-head">
+        <h2>Photography</h2>
+        <p>selected stills / cool, cinematic, arty</p>
+      </div>
+      <div class="grid gallery">
+        <figure class="card reveal">
+          <img src="assets/photo1.png" alt="Photography placeholder 1" loading="lazy">
+          <figcaption>Portrait study — soft neon, 2025</figcaption>
+        </figure>
+        <figure class="card reveal">
+          <img src="assets/photo2.png" alt="Photography placeholder 2" loading="lazy">
+          <figcaption>Night city texture — analogue mood</figcaption>
+        </figure>
+        <figure class="card tall reveal">
+          <img src="assets/art1.png" alt="Photography placeholder 3" loading="lazy">
+          <figcaption>Studio experiment — 35mm reconstruction</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- FILM / PROJECTS -->
+    <section id="film" class="section">
+      <div class="section-head">
+        <h2>Film / Projects</h2>
+        <p>narrative · docu · experimental</p>
+      </div>
+      <div class="projects">
+        <article class="project reveal">
+          <div class="thumb ratio">
+            <img src="assets/film1.png" alt="Film still">
+          </div>
+          <div class="project-body">
+            <h3>Quiet Rooms (short)</h3>
+            <p>intimate, in‑between language — role: director / editor</p>
+            <p class="meta">8:32 · 2025</p>
+          </div>
+        </article>
+        <article class="project reveal">
+          <div class="thumb ratio">
+            <!-- embed placeholder -->
+            <div class="video-placeholder">video / vimeo here</div>
+          </div>
+          <div class="project-body">
+            <h3>Selene — work in progress</h3>
+            <p>family, distance, myth — virtual production interest</p>
+            <p class="meta">WIP · concept</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ART WORKS -->
+    <section id="artworks" class="section">
+      <div class="section-head">
+        <h2>Art Works</h2>
+        <p>photo‑objects · motion tests · poster studies</p>
+      </div>
+      <div class="art-grid">
+        <div class="art-card reveal">
+          <h3>Poster: “Under Current”</h3>
+          <p>print experiment · duotone · filmgrain</p>
+        </div>
+        <div class="art-card reveal">
+          <h3>Motion loop: timewave</h3>
+          <p>looping video piece — chromatic aberration</p>
+        </div>
+        <div class="art-card reveal">
+          <h3>Photo zine draft</h3>
+          <p>for portfolio / applications / screenings</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section about">
+      <div class="section-head">
+        <h2>About</h2>
+        <p>statement / contact / links</p>
+      </div>
+      <div class="about-body reveal">
+        <p>
+          I’m Kristyn, currently in London, working across photography, film, and experimental video.
+          I like quiet emotion, texture, and digital‑meets‑analogue tones. This portfolio is a working space for
+          applications, screenings, and collaborations.
+        </p>
+        <p class="meta">available for: editorial shoots · bts · short film · installations</p>
+        <p><a href="mailto:you@example.com" class="ghost-btn">email me</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Kristyn Universe — built for GitHub Pages.</p>
+  </footer>
+
+  <script>
+    // year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // reveal on scroll
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in-view');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
