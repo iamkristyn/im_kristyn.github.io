@@ -1,92 +1,101 @@
-/* cherrywood-style page for Kristyn */
-:root{
-  --bg:#050505;
-  --text:#f5f5f5;
-  --muted:#a8a8a8;
-  --line:rgba(255,255,255,.04);
-}
-*{box-sizing:border-box;}
-body{
-  margin:0;
-  background:var(--bg);
-  color:var(--text);
-  font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
-  letter-spacing:0.01em;
+/* ----- FONT SETUP ----- */
+:root {
+  --bg: #0a0a0d;
+  --text: #f2f2f2;
+  --muted: #b6b6bb;
+  --accent: #c94b42; /* soft cherry red */
 }
 
-.topbar{
-  position:sticky;
-  top:0;
-  z-index:10;
-  display:flex;
-  justify-content:space-between;
-  gap:24px;
-  padding:18px 16px 14px;
-  border-bottom:1px solid var(--line);
-  background:rgba(5,5,5,.7);
-  backdrop-filter:blur(12px);
+/* ----- BASE ----- */
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'IBM Plex Serif', 'Times New Roman', serif;
+  text-align: center;
+  animation: fadein 1.2s ease-in;
 }
-.title-block h1{
-  font-size:16px;
-  margin:0 0 4px 0;
-  letter-spacing:.08em;
-  text-transform:uppercase;
-}
-.title-block p,
-.meta-block p{
-  margin:0;
-  font-size:11px;
-  color:var(--muted);
-}
-.meta-block a{
-  color:var(--text);
-  text-decoration:none;
-}
-.meta-block a:hover{
-  text-decoration:underline;
+@keyframes fadein {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
-.wall{
-  width:min(920px, 100%);
-  margin:0 auto;
-  padding:10px 0 80px;
+/* ----- HEADER ----- */
+.main-header {
+  padding: 80px 0 30px;
 }
-.entry{
-  border-bottom:1px solid var(--line);
-  padding:26px 16px 30px;
-  opacity:0;
-  transform:translateY(12px);
-  transition:opacity .5s ease, transform .5s ease;
+.logo {
+  font-family: 'Dancing Script', cursive;
+  font-size: 70px;
+  font-weight: 600;
+  color: var(--text);
+  margin: 0 0 30px;
+  letter-spacing: 1px;
+  transition: 0.4s ease;
 }
-.entry.in{
-  opacity:1;
-  transform:translateY(0);
+.logo:hover {
+  color: var(--accent);
 }
-.entry img{
-  width:100%;
-  display:block;
-  background:#0a0a0a;
-  border:1px solid rgba(255,255,255,.02);
-  object-fit:cover;
+.nav {
+  font-family: 'Courier Prime', monospace;
+  font-size: 14px;
+  letter-spacing: 0.08em;
 }
-.caption{
-  margin-top:10px;
-  font-size:11px;
-  text-transform:uppercase;
-  letter-spacing:.14em;
-  color:var(--muted);
+.nav a {
+  text-decoration: none;
+  color: var(--text);
+  opacity: 0.6;
+  margin: 0 8px;
+  transition: 0.3s;
 }
-
-.foot{
-  text-align:center;
-  padding:30px 0 60px;
-  color:var(--muted);
-  font-size:11px;
-  border-top:1px solid var(--line);
+.nav a:hover, .nav a.active {
+  color: var(--accent);
+  opacity: 1;
 }
 
-/* mobile */
-@media (max-width: 640px){
-  .topbar{flex-direction:column; align-items:flex-start;}
-  .wall{width:100%;}
+/* ----- HERO IMAGE ----- */
+.hero {
+  margin: 60px auto 30px;
+  max-width: 720px;
+}
+.hero img {
+  width: 100%;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 2px;
+  display: block;
+  filter: brightness(0.92);
+  transition: 0.6s;
+}
+.hero img:hover {
+  filter: brightness(1);
+}
+.caption {
+  font-family: 'Courier Prime', monospace;
+  color: var(--muted);
+  font-size: 12px;
+  margin-top: 10px;
+  letter-spacing: 0.03em;
+}
+
+/* ----- INTRO ----- */
+.intro {
+  max-width: 600px;
+  margin: 60px auto 100px;
+  line-height: 1.7;
+  font-size: 15px;
+  color: var(--muted);
+}
+.intro p {
+  margin-bottom: 20px;
+}
+
+/* ----- FOOTER ----- */
+.footer {
+  font-family: 'Courier Prime', monospace;
+  font-size: 12px;
+  color: var(--muted);
+  margin-bottom: 40px;
+  letter-spacing: 0.05em;
 }
