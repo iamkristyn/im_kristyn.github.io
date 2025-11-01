@@ -1,169 +1,101 @@
-
+/* ----- FONT SETUP ----- */
 :root {
   --bg: #0a0a0d;
-  --text: #f4f4f5;
+  --text: #f2f2f2;
   --muted: #b6b6bb;
-  --accent: #d03b32;
+  --accent: #c94b42; /* soft cherry red */
 }
 
-* {
-  box-sizing: border-box;
+/* ----- BASE ----- */
+* { box-sizing: border-box; }
+body {
   margin: 0;
   padding: 0;
-}
-
-body {
   background: var(--bg);
   color: var(--text);
-  font-family: Georgia, serif;
-  font-size: 15px;
-  line-height: 1.6;
-  opacity: 0;
-  animation: fadeIn 1.5s ease forwards;
+  font-family: 'IBM Plex Serif', 'Times New Roman', serif;
+  text-align: center;
+  animation: fadein 1.2s ease-in;
 }
-
-@keyframes fadeIn {
+@keyframes fadein {
   from { opacity: 0; transform: translateY(10px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* ——— HEADER ——— */
-
-.topbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  padding: 24px 42px 12px;
-  border-bottom: 1px solid rgba(255,255,255,.05);
+/* ----- HEADER ----- */
+.main-header {
+  padding: 80px 0 30px;
 }
-
-.brand {
-  font-size: 26px;
-  font-weight: 700;
-  letter-spacing: -0.02em;
+.logo {
+  font-family: 'Dancing Script', cursive;
+  font-size: 70px;
+  font-weight: 600;
   color: var(--text);
-  position: relative;
-  top: 0;
-  left: 0;
-  margin: 0;
+  margin: 0 0 30px;
+  letter-spacing: 1px;
+  transition: 0.4s ease;
 }
-
-.brand img {
-  height: 42px;
-  width: auto;
-  display: block;
-  filter: brightness(0.95);
-}
-
-.nav a {
-  color: var(--text);
-  text-decoration: none;
-  margin-left: 14px;
-  text-transform: uppercase;
-  font-size: 12.5px;
-  letter-spacing: 0.09em;
-  opacity: 0.6;
-  transition: opacity 0.3s ease, color 0.3s ease;
-}
-
-.nav a:hover,
-.nav a.active {
-  opacity: 1;
+.logo:hover {
   color: var(--accent);
 }
-
-/* ——— MAIN CONTENT ——— */
-
-main {
-  width: min(900px, 90%);
-  margin: 70px auto;
+.nav {
+  font-family: 'Courier Prime', monospace;
+  font-size: 14px;
+  letter-spacing: 0.08em;
+}
+.nav a {
+  text-decoration: none;
+  color: var(--text);
+  opacity: 0.6;
+  margin: 0 8px;
+  transition: 0.3s;
+}
+.nav a:hover, .nav a.active {
+  color: var(--accent);
+  opacity: 1;
 }
 
-figure {
-  margin-bottom: 28px;
-  overflow: hidden;
-  border: 1px solid rgba(255,255,255,.05);
-  transition: transform 0.4s ease;
+/* ----- HERO IMAGE ----- */
+.hero {
+  margin: 60px auto 30px;
+  max-width: 720px;
 }
-
-figure:hover {
-  transform: scale(1.01);
-}
-
-img {
+.hero img {
   width: 100%;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 2px;
   display: block;
+  filter: brightness(0.92);
+  transition: 0.6s;
 }
-
-figcaption {
-  font-size: 12px;
-  color: var(--muted);
-  padding: 10px 14px;
-  text-align: center;
+.hero img:hover {
+  filter: brightness(1);
 }
-
-/* ——— TEXT BLOCKS ——— */
-
-section {
-  background: rgba(255,255,255,.02);
-  border: 1px solid rgba(255,255,255,.05);
-  padding: 26px 28px;
-  margin-top: 30px;
-  border-radius: 6px;
-  animation: fadeIn 1.5s ease forwards;
-}
-
-h1 {
-  font-size: 30px;
-  margin-bottom: 16px;
-  font-weight: 600;
-  letter-spacing: -0.02em;
-}
-
-h2 {
-  font-size: 22px;
-  margin-top: 20px;
-  margin-bottom: 10px;
-  font-weight: 500;
-}
-
-.subtitle {
-  color: var(--muted);
-  font-style: italic;
-  font-size: 13px;
-  margin-bottom: 12px;
-}
-
-p {
-  margin-bottom: 14px;
-}
-
-/* ——— FOOTER ——— */
-
-footer {
-  text-align: center;
-  padding: 40px;
+.caption {
+  font-family: 'Courier Prime', monospace;
   color: var(--muted);
   font-size: 12px;
-  border-top: 1px solid rgba(255,255,255,.05);
-  margin-top: 50px;
+  margin-top: 10px;
+  letter-spacing: 0.03em;
 }
 
-/* ——— RESPONSIVE ——— */
+/* ----- INTRO ----- */
+.intro {
+  max-width: 600px;
+  margin: 60px auto 100px;
+  line-height: 1.7;
+  font-size: 15px;
+  color: var(--muted);
+}
+.intro p {
+  margin-bottom: 20px;
+}
 
-@media (max-width: 700px) {
-  .topbar {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .nav {
-    margin-top: 8px;
-  }
-  .nav a {
-    margin-left: 0;
-    margin-right: 12px;
-  }
-  main {
-    margin: 50px auto;
-  }
+/* ----- FOOTER ----- */
+.footer {
+  font-family: 'Courier Prime', monospace;
+  font-size: 12px;
+  color: var(--muted);
+  margin-bottom: 40px;
+  letter-spacing: 0.05em;
 }
