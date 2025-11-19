@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Kristyn He — Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="scripts.js"></script>
+</head>
+<body class="theme-light">
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="brand-block">
+        <div class="brand-name">KRISTYN HE</div>
+        <div class="brand-tagline">FILMMAKER · PHOTOGRAPHER · VISUAL ARTIST</div>
+      </div>
+      <nav class="nav-row">
+        <a href="index.html" class="nav-link nav-name is-current">KRISTYNHE</a>
+        <a href="index.html" class="nav-link">INDEX</a>
+        <a href="info.html" class="nav-link">INFO</a>
+        <a href="film.html" class="nav-link">FILM</a>
+        <a href="select-works.html" class="nav-link">SELECT WORKS</a>
+        <a href="graphics.html" class="nav-link">GRAPHICS</a>
+        <button class="nav-link nav-toggle theme-toggle" data-theme="light" type="button">LIGHT</button>
+        <button class="nav-link nav-toggle theme-toggle" data-theme="dark" type="button">DARK</button>
+      </nav>
+    </div>
+  </header>
+<main class="page index-page">
+
+  <!-- Controls -->
+  <section class="index-controls">
+    <div class="view-filter-block">
+      <div class="view-row">
+        <button class="pill-option view-toggle active" data-view="grid">
+          <span class="pill-dot"></span>
+          <span class="pill-label">GRID</span>
+        </button>
+        <button class="pill-option view-toggle" data-view="list">
+          <span class="pill-dot"></span>
+          <span class="pill-label">LIST</span>
+        </button>
+      </div>
+      <div class="view-row">
+        <button class="pill-option filter-toggle active" data-filter="all">
+          <span class="pill-dot"></span>
+          <span class="pill-label">ALL</span>
+        </button>
+        <button class="pill-option filter-toggle" data-filter="film">
+          <span class="pill-dot"></span>
+          <span class="pill-label">FILM</span>
+        </button>
+        <button class="pill-option filter-toggle" data-filter="still">
+          <span class="pill-dot"></span>
+          <span class="pill-label">STILL</span>
+        </button>
+        <button class="pill-option filter-toggle" data-filter="graphic">
+          <span class="pill-dot"></span>
+          <span class="pill-label">GRAPHIC</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- GRID VIEW -->
+  <section id="gridView" class="project-grid">
+    <!-- 1: Under Current -->
+    <article class="project-card" data-type="film">
+      <a href="film.html" class="project-link">
+        <div class="project-image-wrap">
+          <img src="assets/film1.jpg" alt="UNDER CURRENT still" />
+        </div>
+        <div class="project-caption">
+          <div class="project-number">01</div>
+          <div class="project-title">UNDER CURRENT</div>
+          <div class="project-meta">[FILM] · 2025</div>
+        </div>
+      </a>
+    </article>
+
+    <!-- 2: Select Works -->
+    <article class="project-card" data-type="still">
+      <a href="select-works.html" class="project-link">
+        <div class="project-image-wrap">
+          <img src="assets/still1.jpg" alt="Select works preview" />
+        </div>
+        <div class="project-caption">
+          <div class="project-number">02</div>
+          <div class="project-title">SELECT WORKS</div>
+          <div class="project-meta">[STILLS] · 2023–2025</div>
+        </div>
+      </a>
+    </article>
+
+    <!-- 3: Graphics overview -->
+    <article class="project-card" data-type="graphic">
+      <a href="graphics.html" class="project-link">
+        <div class="project-image-wrap">
+          <img src="assets/graphic1.jpg" alt="Graphic experiments" />
+        </div>
+        <div class="project-caption">
+          <div class="project-number">03</div>
+          <div class="project-title">GRAPHIC EXPERIMENTS</div>
+          <div class="project-meta">[GRAPHIC] · 2022–2025</div>
+        </div>
+      </a>
+    </article>
+
+    <!-- 4–8 placeholders -->
+    <article class="project-card" data-type="film">
+      <a href="film.html" class="project-link">
+        <div class="project-image-wrap">
+          <img src="assets/film2.jpg" alt="Future film project" />
+        </div>
+        <div class="project-caption">
+          <div class="project-number">04</div>
+          <div class="project-title">FUTURE SHORT 01</div>
+          <div class="project-meta">[FILM] · YYYY</div>
+        </div>
+      </a>
+    </article>
+
+    <article class="project-card" data-type="still">
+      <a href="select-works.html" class="project-link">
+        <div class="project-image-wrap">
+          <img src="assets/still2.jpg" alt="Photo placeholder" />
+        </div>
+        <div class="project-caption">
+          <div class="project-number">05</div>
+          <div class="project-title">PHOTO SERIES 02</div>
+          <div class="project-meta">[STILL] · YYYY</div>
+        </div>
+      </a>
+    </article>
+
+    <article class="project-card" data-type="graphic">
+      <a href="graphics.html" class="project-link">
+        <div class="project-image-wrap">
+          <img src="assets/graphic2.jpg" alt="Graphic placeholder" />
+        </div>
+        <div class="project-caption">
+          <div class="project-number">06</div>
+          <div class="project-title">POSTER STUDIES</div>
+          <div class="project-meta">[GRAPHIC] · YYYY</div>
+        </div>
+      </a>
+    </article>
+
+    <article class="project-card" data-type="still">
+      <a href="select-works.html" class="project-link">
+        <div class="project-image-wrap">
+          <img src="assets/still3.jpg" alt="Photo placeholder 3" />
+        </div>
+        <div class="project-caption">
+          <div class="project-number">07</div>
+          <div class="project-title">PORTRAIT SKETCHES</div>
+          <div class="project-meta">[STILL] · YYYY</div>
+        </div>
+      </a>
+    </article>
+
+    <article class="project-card" data-type="graphic">
+      <a href="graphics.html" class="project-link">
+        <div class="project-image-wrap">
+          <img src="assets/graphic3.jpg" alt="Type tests graphics" />
+        </div>
+        <div class="project-caption">
+          <div class="project-number">08</div>
+          <div class="project-title">TYPE TESTS</div>
+          <div class="project-meta">[GRAPHIC] · YYYY</div>
+        </div>
+      </a>
+    </article>
+  </section>
+
+  <!-- LIST VIEW -->
+  <section id="listView" class="project-list hidden">
+    <div class="project-list-left">
+      <div class="project-list-rows">
+        <button class="project-list-row active" data-type="film" data-preview="assets/film1.jpg" data-link="film.html">
+          <span class="list-col index-col">01</span>
+          <span class="list-col title-col">UNDER CURRENT</span>
+          <span class="list-col type-col">[FILM]</span>
+          <span class="list-col year-col">2025</span>
+        </button>
+
+        <button class="project-list-row" data-type="still" data-preview="assets/still1.jpg" data-link="select-works.html">
+          <span class="list-col index-col">02</span>
+          <span class="list-col title-col">SELECT WORKS</span>
+          <span class="list-col type-col">[STILLS]</span>
+          <span class="list-col year-col">2023–2025</span>
+        </button>
+
+        <button class="project-list-row" data-type="graphic" data-preview="assets/graphic1.jpg" data-link="graphics.html">
+          <span class="list-col index-col">03</span>
+          <span class="list-col title-col">GRAPHIC EXPERIMENTS</span>
+          <span class="list-col type-col">[GRAPHIC]</span>
+          <span class="list-col year-col">2022–2025</span>
+        </button>
+
+        <button class="project-list-row" data-type="film" data-preview="assets/film2.jpg" data-link="film.html">
+          <span class="list-col index-col">04</span>
+          <span class="list-col title-col">FUTURE SHORT 01</span>
+          <span class="list-col type-col">[FILM]</span>
+          <span class="list-col year-col">YYYY</span>
+        </button>
+
+        <button class="project-list-row" data-type="still" data-preview="assets/still2.jpg" data-link="select-works.html">
+          <span class="list-col index-col">05</span>
+          <span class="list-col title-col">PHOTO SERIES 02</span>
+          <span class="list-col type-col">[STILL]</span>
+          <span class="list-col year-col">YYYY</span>
+        </button>
+
+        <button class="project-list-row" data-type="graphic" data-preview="assets/graphic2.jpg" data-link="graphics.html">
+          <span class="list-col index-col">06</span>
+          <span class="list-col title-col">POSTER STUDIES</span>
+          <span class="list-col type-col">[GRAPHIC]</span>
+          <span class="list-col year-col">YYYY</span>
+        </button>
+
+        <button class="project-list-row" data-type="still" data-preview="assets/still3.jpg" data-link="select-works.html">
+          <span class="list-col index-col">07</span>
+          <span class="list-col title-col">PORTRAIT SKETCHES</span>
+          <span class="list-col type-col">[STILL]</span>
+          <span class="list-col year-col">YYYY</span>
+        </button>
+
+        <button class="project-list-row" data-type="graphic" data-preview="assets/graphic3.jpg" data-link="graphics.html">
+          <span class="list-col index-col">08</span>
+          <span class="list-col title-col">TYPE TESTS</span>
+          <span class="list-col type-col">[GRAPHIC]</span>
+          <span class="list-col year-col">YYYY</span>
+        </button>
+      </div>
+    </div>
+    <div class="project-list-preview">
+      <div class="preview-frame">
+        <img src="assets/film1.jpg" alt="Preview" id="listPreviewImage" />
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <span>KRISTYNHE — PORTFOLIO 2025</span>
+    <span>EMAIL · INSTAGRAM</span>
+  </div>
+</footer>
+
+</body>
+</html>
