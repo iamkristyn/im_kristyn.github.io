@@ -201,6 +201,7 @@ body.page-graphics .site-nav a[data-nav="graphics"]::after {
   text-transform: uppercase;
   cursor: pointer;
   color: inherit;
+  align-self: center;
 }
 
 .theme-toggle:hover {
