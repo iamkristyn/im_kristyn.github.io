@@ -256,7 +256,7 @@ body[data-theme="dark"] .theme-toggle:hover::after {
   display: inline-block;
   background-color: var(--metzger-pink); 
   padding: 8px 16px;
-  border-radius: 4px;
+  border-radius: 1px;
 }
 
 body[data-theme="dark"] .filter-block {
