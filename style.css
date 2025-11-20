@@ -124,7 +124,7 @@ body[data-theme="dark"] .site-title:hover {
 
 .site-subtitle {
   margin-top: 4px;
-  font-size: 11px;
+  font-size: 13px;
   letter-spacing: 0.16em;
   text-transform: uppercase;
   opacity: 0.85;
@@ -202,13 +202,46 @@ body.page-graphics .site-nav a[data-nav="graphics"]::after {
   cursor: pointer;
   color: inherit;
   align-self: center;
+  position: relative;
+  font-size: 13px;
 }
 
-.theme-toggle:hover {
+/* 确保伪元素也继承正确的字体大小 */
+.theme-toggle::before,
+.theme-toggle::after {
+  font-size: inherit; /* 继承父元素的字体大小 */
+}
+
+/* Light模式下的样式 */
+body[data-theme="light"] .theme-toggle::before {
+  content: "LIGHT / ";
+  opacity: 1;
+}
+
+body[data-theme="light"] .theme-toggle::after {
+  content: "DARK";
+  opacity: 0.6; /* Dark文字变淡 */
+}
+
+/* Dark模式下的样式 */
+body[data-theme="dark"] .theme-toggle::before {
+  content: "LIGHT / ";
+  opacity: 0.6; /* Light文字变淡 */
+}
+
+body[data-theme="dark"] .theme-toggle::after {
+  content: "DARK";
+  opacity: 1;
+}
+
+.theme-toggle:hover::before,
+.theme-toggle:hover::after {
+  opacity: 1 !important; /* 悬停时都变为不透明 */
   color: var(--hover-light);
 }
 
-body[data-theme="dark"] .theme-toggle:hover {
+body[data-theme="dark"] .theme-toggle:hover::before,
+body[data-theme="dark"] .theme-toggle:hover::after {
   color: var(--hover-dark);
 }
 
@@ -234,7 +267,7 @@ body[data-theme="dark"] .filter-block {
 }
 
 .filter-row + .filter-row {
-  margin-top: 8px; /* almost no gap between rows */
+  margin-top: 4px; /* almost no gap between rows */
 }
 
 .filter-option {
@@ -243,7 +276,7 @@ body[data-theme="dark"] .filter-block {
   gap: 8px; /* 增加圆点和文字的间距 */
   cursor: pointer; 
   text-transform: uppercase; 
-  font-size: 12px; 
+  font-size: 13px; 
   background: none; 
   border: none; 
   padding: 0; 
@@ -347,13 +380,13 @@ body[data-theme="dark"] .filter-block {
 
 .project-caption {
   margin-top: 8px;
-  font-size: 11px;
   text-transform: uppercase;
   text-align: left;
 }
 
 .project-caption-line {
   display: block;
+  font-size: 13px; /* 统一为13px */
 }
 
 /* ========= INDEX – LIST VIEW ========= */
