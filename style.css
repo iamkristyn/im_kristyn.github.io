@@ -220,14 +220,14 @@ body[data-theme="dark"] .theme-toggle:hover {
 .filter-block {
   margin-top: 40px;
   display: inline-block;
-  background-color: var(--metzger-pink);
-  padding: 8px 16px;
-  border-radius: 4px;
+  background-color: transparent;
+  padding: 0;
+  border-radius: 0;
 }
 
 body[data-theme="dark"] .filter-block {
-  background-color: rgba(255, 237, 234, 0.07);
-  border: 1px solid var(--border-dark);
+  background-color: transparent;
+  border: none;
 }
 
 .filter-row {
@@ -237,16 +237,25 @@ body[data-theme="dark"] .filter-block {
 }
 
 .filter-row + .filter-row {
-  margin-top: 2px; /* almost no gap between rows */
+  margin-top: 16px; /* almost no gap between rows */
 }
 
 .filter-option {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  cursor: pointer;
-  text-transform: uppercase;
-  font-size: 12px;
+  gap: 8px; /* 增加圆点和文字的间距 */
+  cursor: pointer; 
+  text-transform: uppercase; 
+  font-size: 12px; 
+  background: none; 
+  border: none; 
+  padding: 0; 
+  color: inherit; 
+  transition: all 0.2s ease;
+}
+
+.filter-option:not(.is-active) {
+  opacity: 0.6; /* 非激活状态半透明 */
 }
 
 .filter-dot {
@@ -255,11 +264,24 @@ body[data-theme="dark"] .filter-block {
   border-radius: 50%;
   border: 1px solid currentColor;
   background-color: transparent;
-  transition: background-color 0.2s ease, border-color 0.2s ease;
+  transition: all 0.2s ease;
 }
 
 .filter-option.is-active .filter-dot {
-  background-color: currentColor;
+  background-color: currentColor; /* 实心圆点 */
+  border-color: currentColor;
+}
+
+.filter-option:hover {
+  opacity: 1; /* 悬停时完全不透明 */
+}
+
+.filter-option:hover .filter-dot {
+  transform: scale(1.2);
+}
+
+.filter-option.is-active:hover .filter-dot {
+  transform: scale(1.1);
 }
 
 /* ========= INDEX – GRID VIEW ========= */
