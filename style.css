@@ -62,16 +62,16 @@ body[data-theme="dark"] a:hover {
 .page-inner {
   max-width: 1100px;
   margin: 0 auto;
-  padding: 40px 24px 80px;
+  padding: 40px 32px 80px;
 }
 
 @media (max-width: 900px) {
   .page-inner {
-    padding: 28px 16px 56px;
+    padding: 28px 18px 56px;
   }
 }
 
-/* ========= HEADER (Option B) ========= */
+/* ========= HEADER (OPTION B) ========= */
 
 .site-header {
   position: sticky;
@@ -88,7 +88,7 @@ body[data-theme="dark"] .site-header {
 .site-header-inner {
   max-width: 1100px;
   margin: 0 auto;
-  padding: 10px 24px 6px;
+  padding: 14px 32px 8px;
   display: flex;
   align-items: flex-start;
   gap: 32px;
@@ -96,19 +96,19 @@ body[data-theme="dark"] .site-header {
 
 @media (max-width: 900px) {
   .site-header-inner {
-    padding: 10px 16px 6px;
+    padding: 10px 18px 6px;
     flex-direction: column;
-    gap: 8px;
+    gap: 10px;
   }
 }
 
 .site-identity {
-  min-width: 180px;
+  min-width: 190px;
 }
 
 .site-title {
   font-weight: 500;
-  font-size: 13px; /* same size as nav */
+  font-size: 13px; /* same as nav */
   letter-spacing: 0.18em;
   text-transform: uppercase;
 }
@@ -129,7 +129,7 @@ body[data-theme="dark"] .site-title:hover {
   opacity: 0.85;
 }
 
-/* show subtitle only on index */
+/* Subtitle only on index */
 body:not(.page-index) .site-subtitle {
   display: none;
 }
@@ -174,7 +174,7 @@ body:not(.page-index) .site-subtitle {
   width: 16px;
 }
 
-/* Active nav */
+/* Active nav underline */
 body.page-index .site-nav a[data-nav="index"],
 body.page-info .site-nav a[data-nav="info"],
 body.page-film .site-nav a[data-nav="film"],
@@ -205,11 +205,11 @@ body.page-graphics .site-nav a[data-nav="graphics"]::after {
 /* ========= INDEX – FILTER BLOCK (Metzger style) ========= */
 
 .filter-block {
-  margin-top: 32px;
+  margin-top: 40px;
   display: inline-block;
   background-color: var(--metzger-pink);
-  padding: 6px 12px;
-  border-radius: 2px;
+  padding: 6px 14px;
+  border-radius: 4px;
 }
 
 body[data-theme="dark"] .filter-block {
@@ -219,12 +219,12 @@ body[data-theme="dark"] .filter-block {
 
 .filter-row {
   display: flex;
-  gap: 20px;
+  gap: 22px;
   align-items: center;
 }
 
 .filter-row + .filter-row {
-  margin-top: 2px; /* almost no space between rows */
+  margin-top: 1px; /* almost no gap between rows, like Metzger */
 }
 
 .filter-option {
@@ -233,13 +233,12 @@ body[data-theme="dark"] .filter-block {
   gap: 6px;
   cursor: pointer;
   text-transform: uppercase;
-  font-size: 13px; /* same size as nav */
-  letter-spacing: 0.08em;
+  font-size: 12px; /* same feeling as nav */
 }
 
 .filter-dot {
-  width: 8px;
-  height: 8px;
+  width: 6px;
+  height: 6px;
   border-radius: 50%;
   border: 1px solid currentColor;
   background-color: transparent;
@@ -256,13 +255,12 @@ body[data-theme="dark"] .filter-block {
   margin-top: 28px;
 }
 
-/* make gallery images bigger: less gap, same 4 columns */
+/* Bigger images, less space between */
 .projects-grid {
-  margin-top: 20px;
+  margin-top: 24px;
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  column-gap: 14px;
-  row-gap: 18px;
+  gap: 16px 12px; /* tighter than before */
 }
 
 @media (max-width: 1024px) {
@@ -281,6 +279,10 @@ body[data-theme="dark"] .filter-block {
   cursor: pointer;
 }
 
+.project-card-inner {
+  display: block;
+}
+
 .project-thumb {
   background-color: #ddd;
   position: relative;
@@ -290,7 +292,7 @@ body[data-theme="dark"] .filter-block {
 .project-thumb::before {
   content: "";
   display: block;
-  aspect-ratio: 1 / 1; /* 1:1 square */
+  aspect-ratio: 1 / 1; /* square */
 }
 
 .project-thumb img {
@@ -301,26 +303,21 @@ body[data-theme="dark"] .filter-block {
   object-fit: cover;
 }
 
-/* Hover overlay on tiles */
-.project-card-inner {
-  display: block;
-}
-
+/* Hover overlay */
 .project-card-inner:hover .project-thumb::after {
   content: "";
   position: absolute;
   inset: 0;
-  background-color: rgba(245, 177, 165, 0.35);
+  background-color: rgba(245, 177, 165, 0.3);
   mix-blend-mode: multiply;
 }
 
-/* Captions under image, left aligned, not wider than image */
+/* Captions left-aligned, same width as image */
 .project-caption {
   margin-top: 6px;
   font-size: 11px;
   text-transform: uppercase;
   text-align: left;
-  max-width: 100%;
 }
 
 .project-caption-line {
@@ -348,7 +345,7 @@ body[data-theme="dark"] .list-table {
   display: grid;
   grid-template-columns: 40px 2fr 1.5fr 70px;
   align-items: center;
-  padding: 8px 2px;
+  padding: 7px 2px;
   border-bottom: 1px solid var(--border-light);
   cursor: pointer;
 }
@@ -399,7 +396,7 @@ body[data-theme="dark"] .list-preview {
   display: grid;
   grid-template-columns: 150px 1.7fr;
   column-gap: 110px;
-  row-gap: 32px;
+  row-gap: 28px;
 }
 
 @media (max-width: 900px) {
@@ -420,13 +417,13 @@ body[data-theme="dark"] .list-preview {
 /* ========= FILM PAGE ========= */
 
 .film-meta-block {
-  margin-top: 48px;
+  margin-top: 40px;
   max-width: 900px;
   margin-inline: auto;
   display: grid;
   grid-template-columns: 110px 1fr;
   row-gap: 4px;
-  column-gap: 26px;
+  column-gap: 24px;
 }
 
 .film-meta-label {
@@ -440,7 +437,7 @@ body[data-theme="dark"] .list-preview {
 
 .film-video-wrapper {
   max-width: 900px;
-  margin: 24px auto 32px;
+  margin: 20px auto 32px;
 }
 
 .ratio-16x9 {
@@ -466,7 +463,7 @@ body[data-theme="dark"] .list-preview {
 
 .film-text-block {
   max-width: 900px;
-  margin: 0 auto 32px;
+  margin: 0 auto 28px;
 }
 
 .film-text-block h2 {
@@ -476,25 +473,25 @@ body[data-theme="dark"] .list-preview {
 }
 
 .film-text-block p {
-  margin: 0 0 14px;
+  margin: 0 0 12px;
 }
 
 /* Film stills */
 
 .film-stills {
   max-width: 900px;
-  margin: 0 auto 26px;
+  margin: 0 auto 24px;
 }
 
 .film-stills-title {
   text-transform: uppercase;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
 .film-stills-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 8px; /* tighter */
+  gap: 6px;  /* tighter spacing so thumbnails are bigger & closer */
 }
 
 @media (max-width: 900px) {
@@ -606,7 +603,6 @@ body[data-theme="dark"] .list-preview {
 }
 
 /* Hover overlay: title + year */
-
 .sw-caption {
   position: absolute;
   inset: 0;
