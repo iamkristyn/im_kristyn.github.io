@@ -220,14 +220,14 @@ body[data-theme="dark"] .theme-toggle:hover {
 .filter-block {
   margin-top: 40px;
   display: inline-block;
-  background-color: transparent;
-  padding: 0;
-  border-radius: 0;
+  background-color: var;
+  padding: 12px 20px;
+  border-radius: 4px;
 }
 
 body[data-theme="dark"] .filter-block {
-  background-color: transparent;
-  border: none;
+  background-color: rgba(255, 237, 234, 0.07); /* 暗色模式下的背景 */
+  border: 1px solid var(--border-dark); /* 暗色模式下添加边框 */
 }
 
 .filter-row {
@@ -237,7 +237,7 @@ body[data-theme="dark"] .filter-block {
 }
 
 .filter-row + .filter-row {
-  margin-top: 16px; /* almost no gap between rows */
+  margin-top: 8px; /* almost no gap between rows */
 }
 
 .filter-option {
