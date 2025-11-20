@@ -197,7 +197,6 @@ body.page-graphics .site-nav a[data-nav="graphics"]::after {
 }
 
 /* Theme toggle */
-
 .theme-toggle {
   border: none;
   background: none;
@@ -205,6 +204,15 @@ body.page-graphics .site-nav a[data-nav="graphics"]::after {
   font: inherit;
   text-transform: uppercase;
   cursor: pointer;
+  color: inherit;
+}
+
+.theme-toggle:hover {
+  color: var(--hover-light);
+}
+
+body[data-theme="dark"] .theme-toggle:hover {
+  color: var(--hover-dark);
 }
 
 /* ========= INDEX – FILTER BLOCK ========= */
