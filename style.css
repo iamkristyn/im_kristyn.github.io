@@ -14,7 +14,7 @@ html, body {
 body {
   font-family: "IBM Plex Mono", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   font-size: 12px;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.05em;
   line-height: 1.5;
   background-color: #FDFDFD;
   color: #c55143;
@@ -125,7 +125,6 @@ body[data-theme="dark"] .site-title:hover {
 .site-subtitle {
   margin-top: 4px;
   font-size: 10px;
-  letter-spacing: 0.16em;
   text-transform: uppercase;
   opacity: 0.85;
 }
@@ -181,7 +180,7 @@ body.page-info .site-nav a[data-nav="info"],
 body.page-film .site-nav a[data-nav="film"],
 body.page-select-works .site-nav a[data-nav="select-works"],
 body.page-graphics .site-nav a[data-nav="graphics"] {
-  font-weight: 600;
+  font-weight: 400;
 }
 
 body.page-index .site-nav a[data-nav="index"]::after,
@@ -256,13 +255,13 @@ body[data-theme="dark"] .theme-toggle:hover::after {
   margin-top: 40px;
   display: inline-block;
   background-color: var(--metzger-pink); 
-  padding: 12px 20px;
+  padding: 8px 16px;
   border-radius: 4px;
 }
 
 body[data-theme="dark"] .filter-block {
   background-color: rgba(255, 237, 234, 0.07); /* 暗色模式下的背景 */
-  border: 1px solid var(--border-dark); /* 暗色模式下添加边框 */
+  border: none;
 }
 
 .filter-row {
@@ -290,7 +289,7 @@ body[data-theme="dark"] .filter-block {
 }
 
 .filter-option:not(.is-active) {
-  opacity: 0.6; /* 非激活状态半透明 */
+  opacity: 0.9; /* 非激活状态半透明 */
 }
 
 .filter-dot {
