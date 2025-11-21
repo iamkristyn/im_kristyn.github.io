@@ -120,7 +120,7 @@ body[data-theme="dark"] .site-header {
 }
 
 .site-title {
-  font-weight: 400;
+  font-weight: 500;
   font-size: 12px; /* same size as nav */
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -135,7 +135,6 @@ body[data-theme="dark"] .site-title:hover {
 }
 
 .site-subtitle {
-  margin-top: 2px;
   font-size: 10px;
   text-transform: uppercase;
   opacity: 0.85;
@@ -344,8 +343,6 @@ body[data-theme="dark"] .filter-block {
   gap: 24px 20px;
   margin-bottom: 60px; /* 最后一行后留出空白 */
   width: 100%;
-  margin-left: 0;
-  margin-right: 0;
 }
 
 @media (max-width: 1024px) {
