@@ -69,8 +69,6 @@ body[data-theme="dark"] a:hover {
 
 /* 为内容区域添加与header相同的padding */
 .page-inner[data-page="index"] {
-  padding-left: 32px;
-  padding-right: 32px;
   box-sizing: border-box;
 }
 
@@ -263,11 +261,11 @@ body[data-theme="dark"] .theme-toggle:hover::after {
 /* ========= INDEX – FILTER BLOCK ========= */
 
 .filter-block {
-  margin: 40px;
+  margin-top: 40px;
   margin-left: 40px;
   display: inline-block;
   background-color: var(--metzger-pink); 
-  padding: 8px 8px;
+  padding: 8px 10px;
   border-radius: 2px;
 }
 
