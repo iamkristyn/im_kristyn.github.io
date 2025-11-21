@@ -326,7 +326,7 @@ body[data-theme="dark"] .filter-block {
 /* ========= INDEX – GRID VIEW ========= */
 
 .projects-section {
-  margin-top: 32px;
+  margin-top: 16px;
 }
 
 .projects-grid {
@@ -367,7 +367,7 @@ body[data-theme="dark"] .filter-block {
 .project-thumb::before {
   content: "";
   display: block;
-  aspect-ratio: 16 / 10; 
+  aspect-ratio: 3 / 2; 
 }
 
 .project-thumb img {
