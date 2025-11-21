@@ -328,8 +328,10 @@ body[data-theme="dark"] .filter-block {
   margin-top: 28px;
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 24px 18px;
+  gap: 24px 20px;
+    margin-bottom: 60px; /* 最后一行后留出空白 */
 }
+
 
 @media (max-width: 1024px) {
   .projects-grid {
@@ -356,7 +358,7 @@ body[data-theme="dark"] .filter-block {
 .project-thumb::before {
   content: "";
   display: block;
-  aspect-ratio: 1 / 1; /* 1:1 square */
+  aspect-ratio: 4 / 4; /* 4:3 照片比例 */
 }
 
 .project-thumb img {
@@ -383,14 +385,51 @@ body[data-theme="dark"] .filter-block {
 /* Captions under image */
 
 .project-caption {
-  margin-top: 8px;
+  margin-top: 12px;
+  font-size: 11px;
   text-transform: uppercase;
   text-align: left;
+  width: 100%; /* 确保文字不超过图片宽度 */
 }
 
 .project-caption-line {
   display: block;
-  font-size: 12px; 
+  line-height: 1.2;
+}
+
+.project-caption-line:first-child {
+  margin-bottom: 12px; /* 数字和名称之间的间距 */
+}
+
+.project-caption-line:nth-child(2) {
+  margin-bottom: 4px; /* 名称和类型之间的间距 */
+}
+
+.project-caption-line:nth-child(3) {
+  margin-bottom: 4px; /* 类型和年份之间的间距 */
+}
+
+.project-caption-line:nth-child(4) {
+  margin-bottom: 0; /* 年份行不需要下边距 */
+}
+
+/* 响应式调整 */
+@media (max-width: 1200px) {
+  .projects-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 900px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .projects-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
 }
 
 /* ========= INDEX – LIST VIEW ========= */
