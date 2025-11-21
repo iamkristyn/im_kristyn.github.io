@@ -328,10 +328,11 @@ body[data-theme="dark"] .filter-block {
   margin-top: 28px;
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 24px 20px;
-    margin-bottom: 60px; /* 最后一行后留出空白 */
+  gap: 24px 16px;
+  margin-bottom: 60px; /* 最后一行后留出空白 */
+  margin-left: 0;
+  margin-right: 0;
 }
-
 
 @media (max-width: 1024px) {
   .projects-grid {
@@ -358,7 +359,7 @@ body[data-theme="dark"] .filter-block {
 .project-thumb::before {
   content: "";
   display: block;
-  aspect-ratio: 4 / 3; /* 4:3 照片比例 */
+  aspect-ratio: 4 / 3; /* 4:3比例 */
 }
 
 .project-thumb img {
@@ -390,15 +391,20 @@ body[data-theme="dark"] .filter-block {
   text-transform: uppercase;
   text-align: left;
   width: 100%; /* 确保文字不超过图片宽度 */
+  padding: 0; /* 移除可能的内边距 */
 }
 
 .project-caption-line {
   display: block;
   line-height: 1.2;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .project-caption-line:first-child {
-  margin-bottom: 12px; /* 数字和名称之间的间距 */
+  margin-bottom: 10px; /* 数字和名称之间的间距 */
 }
 
 .project-caption-line:nth-child(2) {
