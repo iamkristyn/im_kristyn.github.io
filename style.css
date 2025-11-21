@@ -358,7 +358,7 @@ body[data-theme="dark"] .filter-block {
 .project-thumb::before {
   content: "";
   display: block;
-  aspect-ratio: 4 / 4; /* 4:3 照片比例 */
+  aspect-ratio: 4 / 3; /* 4:3 照片比例 */
 }
 
 .project-thumb img {
