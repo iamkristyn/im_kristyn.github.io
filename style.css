@@ -116,7 +116,7 @@ body[data-theme="dark"] .site-header {
 .site-title {
   font-weight: 500;
   font-size: 12px; /* same size as nav */
-  letter-spacing: 0.12em;
+  letter-spacing: 0.10em;
   text-transform: uppercase;
 }
 
@@ -620,15 +620,16 @@ body[data-theme="dark"] .list-preview {
 
 .film-stills-title {
   text-transform: uppercase;
-  margin-bottom: 10px;
+  font-weight: 500;
+  margin-bottom: 12px;
 }
 
 .film-stills-grid {
   display: grid;
   margin: 10px auto 0px;
   grid-template-columns: repeat(4, 1fr);
-  column-gap: 16px;              
-  row-gap: 24px;    
+  column-gap: 12px;              
+  row-gap: 12px;    
 }
 
 @media (max-width: 900px) {
